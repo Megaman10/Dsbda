@@ -1,0 +1,36 @@
+su root
+password :student
+sudo-apt update
+sudo-apt upgrade
+sudo apt install default-jdk scala git -y
+wget https://downloads.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
+tar xvf spark-*
+sudo mv spark-3.0.3-bin-hadoop2.7 /opt/spark
+cd /opt/spark
+ls
+root$ nano /etc/environment
+*******-_________________
+type 
+SPARK_HOME=/opt/spark/bin
+PATH="user/local/$bin:...................local/games:$SPARK_HOME/bin"
+cd /opt/spark/sbin
+ls
+*****-----
+u will see files like master.sh,slave sh.
+to start master type
+sbin$./start-master.sh
+copy the url given and paste in browser
+
+to run slave type
+root:/opt/spark/sbin$./start-slave.sh
+
+to go to scala terminal
+$opt/spark
+ls
+cd spark-3.0.3-bin-hadoop../bin$./spark-shell
+you will get 
+
+scala>
+
+
+
